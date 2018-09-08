@@ -4,7 +4,7 @@ import './Navigation.css';
 import $ from 'jquery';
 
 
-class Error extends Component {
+class Navigation extends Component {
   render() {
     return (
       <div>
@@ -17,4 +17,4 @@ class Error extends Component {
   }
 }
 
-export default Error;
+export default Navigation;
