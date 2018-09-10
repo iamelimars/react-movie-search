@@ -18,9 +18,7 @@ class App extends Component {
       return (
         <BrowserRouter>
           <div className="content-wrapper">
-            <Col smHidden={true} xsHidden={true}>
-              <Sidebar />
-            </Col>
+            <Navigationbar />
             <div className="main-panel">
               <div className="content">
                 <Switch>
