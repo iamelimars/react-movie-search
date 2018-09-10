@@ -1,12 +1,40 @@
 import React, { Component } from 'react';
 import './Navigation.css';
 import { NavLink } from "react-router-dom";
-import { Navbar , Nav, NavItem, NavDropdown, MenuItem} from 'react-bootstrap';
+import { Navbar , Nav, NavItem, NavDropdown, MenuItem, Modal, OverlayTrigger, Popover, Button} from 'react-bootstrap';
+
+import Search from '../../Search/Search.js'
 
 
 class Navigationbar extends React.Component {
+
+  constructor(props, context) {
+    super(props, context);
+
+    this.searchShow = this.searchShow.bind(this);
+    this.searchClose = this.searchClose.bind(this);
+
+    this.state = {
+      show: false
+    };
+  }
+
+  searchShow() {
+    console.log("clicked");
+    this.setState({
+      show: true
+    })
+  }
+
+  searchClose() {
+    this.setState({
+      show: false
+    })
+  }
+
   render () {
     return (
+      <div>
       <Navbar>
         <Navbar.Header>
           <Navbar.Brand>
@@ -41,11 +69,28 @@ class Navigationbar extends React.Component {
           </Nav>
           <Nav pullRight>
             <NavItem>
-              <ion-icon name="ios-search"></ion-icon>
+              <ion-icon name="ios-search" onClick={this.searchShow}></ion-icon>
             </NavItem>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
+
+      <Modal show={this.state.show} onHide={this.searchClose} bsSize="large"
+        aria-labelledby="contained-modal-title-lg">
+          <Modal.Header closeButton>
+            <Modal.Title id="contained-modal-title-lg">Search</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <Search />
+          </Modal.Body>
+          <Modal.Footer>
+            <Button onClick={this.searchClose}>Close</Button>
+          </Modal.Footer>
+        </Modal>
+
+      </div>
+
+
     )
   }
 }
