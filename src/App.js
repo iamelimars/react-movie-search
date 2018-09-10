@@ -23,8 +23,19 @@ class App extends Component {
               <div className="content">
                 <Switch>
                   <Route path="/" component={Home} exact />
-                  <Route path="/movies" component={MoviesPage} />
-                  <Route path="/shows" component={ShowsPage} />
+                  <Route path="/movies" component={MoviesPage} exact />
+                  <Route path="/shows" component={ShowsPage} exact/>
+                  <Route path="/discover" component={ShowsPage} exact/>
+
+                  <Route path="/movies/popular" component={MoviesPage} exact/>
+                  <Route path="/movies/toprated" component={MoviesPage} exact/>
+                  <Route path="/movies/upcoming" component={MoviesPage} exact/>
+                  <Route path="/movies/nowplaying" component={MoviesPage} exact/>
+
+                  <Route path="/shows/popular" component={ShowsPage} exact/>
+                  <Route path="/shows/toprated" component={ShowsPage} exact/>
+                  <Route path="/shows/upcoming" component={ShowsPage} exact/>
+                  <Route path="/shows/nowplaying" component={ShowsPage} exact/>
                   <Route component={Error} />
                 </Switch>
               </div>
