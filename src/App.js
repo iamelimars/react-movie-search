@@ -19,7 +19,7 @@ class App extends Component {
         <BrowserRouter>
           <div className="content-wrapper">
             <Col smHidden={true} xsHidden={true}>
-              <Sidebar />
+              // <Sidebar />
             </Col>
             <div className="main-panel">
               <div className="content">
