@@ -44,7 +44,7 @@ class Search extends Component {
 
         <div className="App">
 
-          <input className="searchBar" onChange={this.searchChangeHandler.bind(this)} placeholder="Enter Search Term"/>
+          <input className="searchBar"  onChange={this.searchChangeHandler.bind(this)} placeholder="Movies & TV Shows . . ."/>
 
           {this.state.rows}
 

@@ -1,0 +1,14 @@
+.searchBar {
+  border: 1px solid #ABADB3;
+  border-style: none none solid none;
+}
+.modal-backdrop {
+   background-color: white;
+}
+
+.modal-content {
+  border-color: white;
+  -webkit-box-shadow: 2px 5px 16px 1px rgba(0,0,0,0.3);
+  -moz-box-shadow: 2px 5px 16px 1px rgba(0,0,0,0.3);
+  box-shadow: 2px 5px 16px 1px rgba(0,0,0,0.3);
+}

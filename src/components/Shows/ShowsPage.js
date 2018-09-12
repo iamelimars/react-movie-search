@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import './ShowsPage.css';
-import $ from 'jquery';
 
 class ShowsPage extends Component {
   render() {

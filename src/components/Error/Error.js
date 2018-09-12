@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './Error.css';
-import $ from 'jquery';
 
 
 class Error extends Component {

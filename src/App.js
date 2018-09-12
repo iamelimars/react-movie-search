@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import './App.css';
-import $ from 'jquery';
-import { Col } from 'react-bootstrap';
+// import $ from 'jquery';
+// import { Col } from 'react-bootstrap';
 
 import Home from './components/Home/Home.js';
 import MoviesPage from './components/Movies/MoviesPage.js';
 import ShowsPage from './components/Shows/ShowsPage.js';
 import Error from './components/Error/Error';
-import Navigation from './components/Common/Navigation/Navigation';
 import Navigationbar from './components/Common/Navigation/Navbar';
-import Sidebar from './components/Common/Sidebar/Sidebar';
+import DiscoverMovies from './components/Movies/DiscoverMovies';
 
 class App extends Component {
 
@@ -19,13 +18,16 @@ class App extends Component {
         <BrowserRouter>
           <div className="content-wrapper">
             <Navigationbar />
-            <div className="main-panel">
-              <div className="content">
+            <div>
+              <div>
                 <Switch>
                   <Route path="/" component={Home} exact />
                   <Route path="/movies" component={MoviesPage} exact />
                   <Route path="/shows" component={ShowsPage} exact/>
+
                   <Route path="/discover" component={ShowsPage} exact/>
+                  <Route path="/discover/movies" component={DiscoverMovies} exact/>
+                  <Route path="/discover/shows" component={ShowsPage} exact/>
 
                   <Route path="/movies/popular" component={MoviesPage} exact/>
                   <Route path="/movies/toprated" component={MoviesPage} exact/>

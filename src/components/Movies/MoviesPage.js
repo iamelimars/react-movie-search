@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './MoviesPage.css';
-import $ from 'jquery';
 
 
 class MoviesPage extends Component {
